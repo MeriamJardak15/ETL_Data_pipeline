@@ -30,22 +30,6 @@ The Apache Airflow DAG will:
 - **Pandas**: For data manipulation and transformation
 - **Shell scripting**: Automating processes and managing files
 
-## 📁 Project Structure
-
-```plaintext
-ETL_Data_Pipeline/
-│
-├── dags/
-│   └── etl_pipeline.py        # Main DAG definition
-├── data/
-│   ├── traffic_data.csv       # Sample CSV data
-│   ├── traffic_data.tsv       # Sample TSV data
-│   └── traffic_data_fixed.txt # Sample fixed-width text data
-├── scripts/
-│   └── transform_data.py      # Data transformation logic
-├── README.md
-```
-
 ## 🚀 Getting Started
 
 To run this project locally:
