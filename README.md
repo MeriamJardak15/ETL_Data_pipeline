@@ -1,7 +1,3 @@
-Here’s an updated version of your README, incorporating the details you provided while ensuring it remains clear and actionable for users:
-
----
-
 # 🚦 ETL Data Pipeline with Apache Airflow
 
 This project demonstrates how to build an **ETL (Extract, Transform, Load)** data pipeline using **Apache Airflow** and the **BashOperator** to automate the ingestion and processing of road traffic data from various toll plazas.
@@ -48,7 +44,6 @@ ETL_Data_Pipeline/
 ├── scripts/
 │   └── transform_data.py      # Data transformation logic
 ├── README.md
-└── requirements.txt           # Project dependencies
 ```
 
 ## 🚀 Getting Started
@@ -150,61 +145,5 @@ To run this project locally:
     You should see tasks like `extract_data`, `transform_data`, and `load_data`.
 
 ---
-
-## 🎯 DAG Breakdown
-
-Here’s a breakdown of the tasks in the `etl_pipeline.py` DAG:
-
-1. **extract_data**: 
-   - This task uses the **BashOperator** to extract data from various file formats, including CSV, TSV, and fixed-width text files.
-   
-2. **transform_data**: 
-   - Using a custom Python script (`transform_data.py`), this task processes the raw data into a standardized format using **Pandas**.
-
-3. **load_data**: 
-   - The transformed data is loaded into a **staging area**, ready for further analysis.
-
----
-
-## ❓ Common Issues
-
-- **Permission Issues**: If you encounter permission issues with file access, make sure the `data/` directory and its contents have proper read/write permissions.
-  
-  You can grant permissions using:
-  
-  ```bash
-  sudo chmod -R 777 /home/project/airflow/dags/data
-  ```
-
-- **DAG Not Showing**: If your DAG is not appearing in the Airflow UI, try restarting the Airflow scheduler:
-
-  ```bash
-  airflow scheduler
-  ```
-
-- **Task Failures**: If a task fails, check the Airflow UI logs for specific error messages. Debugging and fixing the issue might involve adjusting file paths, fixing syntax errors, or resolving package dependency issues.
-
----
-
-## 🔧 Updating Dependencies
-
-If you need to add new dependencies, update the `requirements.txt` file and install them via:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## 📚 References
-
-- [Apache Airflow Documentation](https://airflow.apache.org/docs/)
-- [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
-
----
-
-Let me know if you need any further adjustments!
-3. Set up Apache Airflow and add the DAG file to your DAGs folder.
-4. Trigger the DAG from the Airflow UI.
 
 
